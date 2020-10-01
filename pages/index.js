@@ -17,11 +17,11 @@ export default function Index() {
 {/* Potential idea, make the content fade in on gradient based on the offset height of bottom most part of the section dividing on the smaller upper portion offset base value*/}
         <section>
                 <div id="navCalc">
-                    <img className="divideFormat" src="/divide.jpg" />
+                    <img id="topImg" className="divideFormat" src="/divide.jpg" />
                     <div className="dark">
                         <h1>I Am</h1>
                     </div>
-                    <img id="bottomName" className="divideFormat" src="/divide2.jpg" />
+                    <img id="bottomImg" className="divideFormat" src="/divide2.jpg" />
                 </div>
             </section>
 

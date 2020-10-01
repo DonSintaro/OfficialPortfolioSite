@@ -8,11 +8,14 @@ export default function Layout(props) {
 
     async function myFunction() {
 
-        var contentBoxV = (contentBox.getBoundingClientRect().top + document.documentElement.scrollTop)+((content.getBoundingClientRect().top + document.documentElement.scrollTop)*0.25) + 20;
+        var contentBoxV = (contentBox.getBoundingClientRect().top + document.documentElement.scrollTop)+((content.getBoundingClientRect().top + document.documentElement.scrollTop)*0.25);
 
         var windowOffset = (content.getBoundingClientRect().top + document.documentElement.scrollTop);
 
-        if ((contentBoxV >= windowOffset)) {
+        console.log(contentBoxV);
+        console.log(windowOffset);
+
+        if ((contentBoxV >= (windowOffset + 15))) {
             navbar.classList.add("sticky");
             
         }
@@ -22,18 +25,13 @@ export default function Layout(props) {
     }
 
 
-
-
-
-
     if (typeof window !== "undefined") {
         var navbar = document.getElementById("navbar");
-        var content = document.getElementById("navCalc");
+        var content = document.getElementById("subNav");
         var contentBox = document.getElementById("contentH");
 
 
-        
-        var bottomName = document.getElementById("bottomName");
+
         
     }
 
@@ -42,6 +40,9 @@ export default function Layout(props) {
 
 
         <div id="contentH" className="container-xl contentDocument" onScroll={() => myFunction()} >
+
+            <div id="paddingTop"></div>
+            <div id="subNav"></div>
 
             <div id="navbar" className="container navMenu fixedIntro">
                 <div className="row">
