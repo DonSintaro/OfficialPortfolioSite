@@ -23,13 +23,13 @@ section {
 
 
 .navMenu{
-    
+    padding:0;
     width: 100%;
     max-width: 100%;
     text-align: center;
     background-color: white;
     overflow: hidden;
-    font-size: 20px;
+    font-size: calc(.8vw + 20px);
     line-height: calc(5vh + 30px);
     height: calc(5vh + 30px);
 
@@ -37,6 +37,7 @@ section {
 }
 
 .sticky {
+    z-index: 100;
     position: fixed;
     height: calc(5vh + 30px);
     top: 5vh;
@@ -57,9 +58,16 @@ section {
     height: calc(5vh + 30px);
 }
 
-.fixedIntro{
-   
+#jeffPic{
+    object-fit: contain;
     
+    max-width: 35vh;
+    min-width: 35vh;
+    float:right;
+    border-radius: 50%;
+    margin-left:2vw;
+    margin-bottom: 1vh;
+    border: #616161 solid 7px;
 }
 
 body{
@@ -77,25 +85,31 @@ body{
 }
 
 .dark{
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 0;
+    position: relative;
     color:black;
     text-shadow: -1px -1px 0 white,  
     1px -1px 0 white,
     -1px 1px 0 white,
      1px 1px 0 white;
-    outline: rgba(255, 255, 255, 0.082) 10px solid;
+  
+    border: #000000 solid 3px;
     background-color: black;
     text-align: center;
-    padding:4px;
+    padding-bottom:16px;
+    box-shadow: 0px 0px 15px 15px #000000;
+    
 }
 
 h1{
-    font-size: 4rem;
+    font-size: calc(8vw + 20px);
     margin:0;
 }
 
-#navCalc {
-
-
+footer {
+clear:both;
 
 }
 
@@ -124,9 +138,11 @@ h1{
     #bottomImg{
         vertical-align: middle;
         object-fit: cover;
+        box-shadow: 0px -10px 0px 0px #000000;
+        min-width: 100%;
+        
     }
     #topImg{
-
         vertical-align: bottom;
         height: 150px;
     }
@@ -162,6 +178,15 @@ h1{
         
         margin-top: 0;
     }
+
+    #jeffPic{
+        object-fit: contain;
+        margin-left: calc(50% - (17.5vw + 14px));
+        padding:0;
+        float:none;
+    }
+
+
     .sticky{
         top:0;
     }
@@ -177,17 +202,20 @@ h1{
   }
 
   @media screen and (max-width: 400px) {
+
+
+
     .navMenu{
         font-size: 14px;
     }
   }
   @media screen and (max-width: 350px) {
     .navMenu{
-        font-size: 10px;
+        font-size: 12px;
     }
   }
   @media screen and (max-width: 300px) {
     .navMenu{
-        font-size: 8px;
+        font-size: 10px;
     }
   }
