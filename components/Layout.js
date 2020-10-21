@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from 'next/link';
 
 
 
@@ -29,41 +30,38 @@ export default function Layout(props) {
         var navbar = document.getElementById("navbar");
         var content = document.getElementById("subNav");
         var contentBox = document.getElementById("contentH");
-
-
-
         
     }
 
     return <>
 
 
-
+        
         <div id="contentH" className="container-xl contentDocument" onScroll={() => myFunction()} >
-
+        <div class="iceBorder"></div>
+        <div class="frostBack"></div>
             <div id="paddingTop"></div>
             <div id="subNav"></div>
 
             <div id="navbar" className="container navMenu fixedIntro">
-                <div className="row">
-                    <div className="col">Jeffrey Arriaga</div>
-                    <div className="col">Resume</div>
-                    <div className="col">Portfolio</div>
-                    <div className="col">Contact</div>
+                <div className="row linkContainer">
+                <Link href="/"><div className="col navLink">Jeffrey Arriaga</div></Link>
+                    <div className="col navLink">Resume</div>
+                    <div className="col navLink">Portfolio</div>
+                    <div className="col navLink">Contact</div>
                 </div>
             </div>
 
 
-
-            
-
             {props.children}
 
             <footer>
-                <p>Footer</p>
+
+                <p>Jeffrey Arriaga</p>
             </footer>
 
         </div>
+        
 
     </>
 
