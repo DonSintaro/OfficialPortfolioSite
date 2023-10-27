@@ -19,12 +19,8 @@ export default function Layout(props) {
 
         var windowOffset = (content.getBoundingClientRect().top + document.documentElement.scrollTop);
 
-        console.log("contentBoxV: ", contentBoxV);
-        console.log("windowOffset: ", windowOffset);
-
         if ((contentBoxV >= (windowOffset + 15))) {
             navbar.classList.add("sticky");
-
         }
         else {
             navbar.classList.remove("sticky");
@@ -33,9 +29,6 @@ export default function Layout(props) {
 
 
     return <>
-
-
-
         <div id="contentH" className="container-xl contentDocument" onScroll={() => myFunction()} >
             <div className="iceBorder"></div>
             <div className="frostBack"></div>
@@ -57,7 +50,6 @@ export default function Layout(props) {
             {props.children}
 
             <footer>
-
                 <p>Jeffrey Arriaga</p>
             </footer>
 
@@ -65,12 +57,5 @@ export default function Layout(props) {
 
 
     </>
-
-
-
-
-
-
-
 }
 
